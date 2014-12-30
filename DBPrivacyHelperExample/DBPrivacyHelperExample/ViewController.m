@@ -53,10 +53,9 @@
 }
 
 - (void) openHelper {
-    static DBPrivacyType type, typeCount = DBPrivacyTypeContacts + 1;
-    [self showPrivacyHelperForType:type];
-    type = (type + 1) % typeCount;
-//    [self openHelperToCustomize];
+   // static DBPrivacyType type, typeCount = DBPrivacyTypeContacts + 1;
+  //  [self showPrivacyHelperForType:DBPrivacyTypeLocation];
+    [self openHelperToCustomize];
 }
 
 - (void) openHelperToCustomize {
@@ -66,7 +65,7 @@
         //customize the completion block of presentViewController:animated:completion:
     } didDismiss:^{
         //customize the completion block of dismissViewControllerAnimated:completion:
-    } useDefaultSettingPane:YES]; //If NO force to use DBPrivateHelperController instead of the default settings pane on iOS 8. Only for iOS 8. Default value is YES.
+    } useDefaultSettingPane:NO]; //If NO force to use DBPrivateHelperController instead of the default settings pane on iOS 8. Only for iOS 8. Default value is YES.
 }
 
 @end

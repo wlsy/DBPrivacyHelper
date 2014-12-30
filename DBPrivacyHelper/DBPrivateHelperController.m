@@ -167,6 +167,10 @@ NSLocalizedStringFromTable(key, @"DBPrivacyHelperLocalizable", nil)
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DBPrivateHelperCell *cell = [tableView dequeueReusableCellWithIdentifier:[DBPrivateHelperCell identifier]];
     [cell setIcon:_cellData[indexPath.row][@"icon"] text:_cellData[indexPath.row][@"desc"] row:indexPath.row + 1];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    if (indexPath.row == 0 && IS_IOS_8 ) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
     return cell;
 }
 
@@ -174,6 +178,16 @@ NSLocalizedStringFromTable(key, @"DBPrivacyHelperLocalizable", nil)
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self cellHeightForText:_cellData[indexPath.row][@"desc"]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0 && IS_IOS_8 ) {
+        if ( &UIApplicationOpenSettingsURLString != NULL ) {
+            NSURL *appSettings = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            [[UIApplication sharedApplication] openURL:appSettings];
+        }
+    }
 }
 
 #pragma mark - Status Bar Style
