@@ -15,6 +15,7 @@
 "HomeKit" = "HomeKit";  // It's also called HomeKit in zh-Hant
 "Motion Activity" = "运动记录";
 "Contacts" = "通讯录";
+"Notifications" = "通知";
 
 "Allow access to \"%@\"\nwith these steps:" = "根据以下步骤\n开启「%@」功能";
 

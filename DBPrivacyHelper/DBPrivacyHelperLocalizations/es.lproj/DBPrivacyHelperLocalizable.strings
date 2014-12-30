@@ -15,6 +15,7 @@
 "HomeKit" = "HomeKit";
 "Motion Activity" = "Actividad física";
 "Contacts" = "Contactos";
+"Notifications" = "Notifications";
 
 "Allow access to \"%@\"\nwith these steps:" = "Para habilitar el acceso a \"%@\"\nprocede de la siguiente manera:";
 

@@ -59,7 +59,7 @@
 }
 
 - (void) openHelperToCustomize {
-    [self showPrivacyHelperForType:DBPrivacyTypeLocation controller:^(DBPrivateHelperController *vc) {
+    [self showPrivacyHelperForType:DBPrivacyTypeNotifications controller:^(DBPrivateHelperController *vc) {
         //customize the view controller to present
     } didPresent:^{
         //customize the completion block of presentViewController:animated:completion:

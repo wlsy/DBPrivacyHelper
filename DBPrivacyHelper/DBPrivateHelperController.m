@@ -43,6 +43,7 @@ NSLocalizedStringFromTable(key, @"DBPrivacyHelperLocalizable", nil)
                         @(DBPrivacyTypeHealth):@{ @"title":DBPrivacyHelperLocalizableStrings(@"Health"), @"icon":@"dbph_healthIcon" },
                         @(DBPrivacyTypeHomeKit):@{ @"title":DBPrivacyHelperLocalizableStrings(@"HomeKit"), @"icon":@"dbph_homekitIcon" },
                         @(DBPrivacyTypeMotionActivity):@{ @"title":DBPrivacyHelperLocalizableStrings(@"Motion Activity"), @"icon":@"dbph_motionIcon" },
+                        @(DBPrivacyTypeNotifications):@{ @"title":DBPrivacyHelperLocalizableStrings(@"Notifications"), @"icon":@"dbph_notificationsIcon" },
                         @(DBPrivacyTypeContacts):@{ @"title":DBPrivacyHelperLocalizableStrings(@"Contacts"), @"icon":@"dbph_contactsIcon" }};
 
         NSString *titleText = DBPrivacyHelperLocalizableStrings(@"Tap on \"%@\"");

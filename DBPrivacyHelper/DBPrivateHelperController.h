@@ -46,7 +46,11 @@ typedef NS_ENUM(NSUInteger, DBPrivacyType){
     /**
      *  Access to Contacts
      */
-    DBPrivacyTypeContacts
+    DBPrivacyTypeContacts,
+    /**
+     *  Push Notifications
+     */
+    DBPrivacyTypeNotifications
 };
 
 @interface DBPrivateHelperController : UIViewController
